@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Important de le mettre dans le selecteur * (all)*/
+  list-style: none; /* enlever les puces sur la liste*/
+}
+body {
+  color: white;
+  text-align: center;
+  min-height: 200vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+.box {
+  border: 6px solid white;
+  background-color: black;
+  transition: 0.25s ease;
+  padding: 10px;
+  border-radius: 20px;
+}
+.bonne-reponse {
+    /* visibility: hidden; */
+    display: none;
+    opacity: 0;
+    color: rgba(34, 139, 34, 0.8);
+}
+.mauvaise-reponse {
+  /* visibility: hidden; */
+  display: none;
+  opacity: 0;
+  color: red;
+  width: 300px;
+  margin: 10px auto 0; /* 3 valeurs => haut, gauche-droite, bas (4 valeurs <=> haut, droite, bas, gauche */
+}
+.bReponse {
+    /* visibility: visible; */
+    display: block;
+    opacity: 1;
+    transition: 1s ease;
+}
+.mouse-move {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(200, 196, 196);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%); /* permet de centrer le pointeur de la souris sur le centre du cercle */ 
+    /* transition: 0.2s ease; /*pour créer un décalage entre le mvt de la souris et celui du cercle*/
+    z-index: -1;
+}
